@@ -35,7 +35,6 @@ body{
     position: relative;
     background-color: wheat;
     width: auto;
-    height: 40px;
     line-height: 40px;
     margin-bottom: 2px;
 }
@@ -48,7 +47,7 @@ body{
 .topbar a:hover{
     background-color: yellowgreen;
 }
-.topbar .sub-menu{
+/* .topbar .sub-menu{
     position: absolute;
     left: 205px;
     top: 0;
@@ -63,6 +62,9 @@ body{
 }
 .topbar li:hover .sub-menu{
     display: block;
+} */
+.topbar .sub-menu{
+    display: none;
 }
 .main{
     position: relative;
