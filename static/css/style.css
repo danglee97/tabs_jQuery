@@ -17,8 +17,52 @@ body{
 
 .head{
     text-align:center;
-    margin: 30px 0 30px 0;
     color: white;
+}
+.head .img{
+    float: left;
+    margin: 10px 10px;
+}
+.topbar{
+    display: none;
+}
+.topbar ul{
+    text-align: center;
+    width: 200px;
+    list-style-type: none;
+}
+.topbar ul li{
+    position: relative;
+    background-color: wheat;
+    width: auto;
+    height: 40px;
+    line-height: 40px;
+    margin-bottom: 2px;
+}
+.topbar ul li a{
+    text-decoration: none;
+    display: block;
+    color: tomato;
+    font-weight: bold;
+}
+.topbar a:hover{
+    background-color: yellowgreen;
+}
+.topbar .sub-menu{
+    position: absolute;
+    left: 205px;
+    top: 0;
+    display: none;
+}
+.topbar .sub-menu li{
+    position: relative;
+    background-color: rgb(224, 243, 252);
+    width: auto;
+    height: 40px;
+    line-height: 40px;
+}
+.topbar li:hover .sub-menu{
+    display: block;
 }
 .main{
     position: relative;
