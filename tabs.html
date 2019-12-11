@@ -183,9 +183,16 @@
                 $(".sub-menu").hide();
             });
             $("a.menuu").click(function(){
+                var delactive = $("a.menuu.active")
+                if ($(this).is(delactive))
+                {
+                    delactive.removeClass("active").parent().find("ul").slideUp();
+                    return true;
+                }
+                delactive.removeClass("active").parent().find("ul").slideToggle();
+                $(this).addClass("active");
                 var clickOn = $(this).parent().find("ul");
-                $(".sub-menu").slideUp();
-                $(clickOn).slideDown();
+                $(clickOn).slideToggle();
                 return false;
             });
             $("a.textclick").click(function(){
