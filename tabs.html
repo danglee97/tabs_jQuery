@@ -14,28 +14,29 @@
         <div class="clear"></div>
         <div class="topbar">
             <ul>
-                <li><a class="menuu" href="#sub1">MENU 1</a>
-                    <ul id="sub1" class="sub-menu">
+                <li><a class="menuu" >MENU 1</a>
+                    <ul class="sub-menu">
                         <li><a href="#">MENU 1A</li>
                         <li><a href="#">MENU 1B</li>
                         <li><a href="#">MENU 1C</li>
                     </ul>
                 </li>
-                <li><a class="menuu" href="#sub2">MENU 2</a>
-                    <ul id="sub2" class="sub-menu">
+                <li><a class="menuu" >MENU 2</a>
+                    <ul class="sub-menu">
                         <li><a href="#">MENU 2A</li>
                         <li><a href="#">MENU 2B</li>
                         <li><a href="#">MENU 2C</li>
                     </ul>
                 </li>
-                <li><a class="menuu" href="#">MENU 3</a></li>
-                <li><a class="menuu" href="#sub4">MENU 4</a>
-                    <ul id="sub4" class="sub-menu">
+                <li><a class="menuu" >MENU 3</a></li>
+                <li><a class="menuu" >MENU 4</a>
+                    <ul class="sub-menu">
                         <li><a href="#">MENU 4A</li>
                         <li><a href="#">MENU 4B</li>
                         <li><a href="#">MENU 4C</li>
-                    </ul></li>
-                <li><a class="menuu" href="#">MENU 5</a></li>
+                    </ul>
+                </li>
+                <li><a class="menuu">MENU 5</a></li>
             </ul>
         </div>
         <h1>DEMO Tabs Javasripts</h1>
@@ -137,11 +138,9 @@
                 $(".sub-menu").hide();
             });
             $("a.menuu").click(function(){
-                var tthis = $(this);
-                var clickmenu = tthis.attr('href');
-                // $("ul.sub-menu").hide();
-                $("ul.sub-menu").slideUp();
-                $(clickmenu).slideDown();
+                var clickOn = $(this).parent().find("ul");
+                $(".sub-menu").slideUp();
+                $(clickOn).slideDown();
                 return false;
             });
             $("a.textclick").click(function(){
